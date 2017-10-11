@@ -3,10 +3,11 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.awt.*;
 
 
 public class Axon7Tool extends Application{
@@ -27,6 +28,7 @@ public class Axon7Tool extends Application{
         root.setAlignment(Pos.CENTER);
         HBox.setHgrow(root, Priority.ALWAYS);
         addBackupButton();
+        root.setBackground(new Background(new BackgroundFill(Color.BLACK,new CornerRadii(0.06), new Insets(10))));
         Scene scene = new Scene(root,600,400);
         stage.setScene(scene);
         stage.setTitle("Axon7 Tool (EDL MANAGER)");
